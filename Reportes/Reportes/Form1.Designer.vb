@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,31 +20,82 @@ Partial Class Form1
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.BtnImprimirCargos = New System.Windows.Forms.Button()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportesDeCargosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportesDeEmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'BtnImprimirCargos
+        'MenuStrip1
         '
-        Me.BtnImprimirCargos.Location = New System.Drawing.Point(52, 55)
-        Me.BtnImprimirCargos.Name = "BtnImprimirCargos"
-        Me.BtnImprimirCargos.Size = New System.Drawing.Size(179, 71)
-        Me.BtnImprimirCargos.TabIndex = 0
-        Me.BtnImprimirCargos.Text = "Mostrar Reportes de Cargos"
-        Me.BtnImprimirCargos.UseVisualStyleBackColor = True
+        Me.MenuStrip1.BackColor = System.Drawing.Color.DarkBlue
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportesToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(712, 28)
+        Me.MenuStrip1.TabIndex = 1
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'ReportesToolStripMenuItem
+        '
+        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportesDeCargosToolStripMenuItem, Me.ReportesDeEmpleadosToolStripMenuItem, Me.EmpleadosToolStripMenuItem})
+        Me.ReportesToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ReportesToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
+        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(86, 24)
+        Me.ReportesToolStripMenuItem.Text = "Reportes"
+        '
+        'ReportesDeCargosToolStripMenuItem
+        '
+        Me.ReportesDeCargosToolStripMenuItem.BackColor = System.Drawing.Color.DarkBlue
+        Me.ReportesDeCargosToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ReportesDeCargosToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.ReportesDeCargosToolStripMenuItem.Name = "ReportesDeCargosToolStripMenuItem"
+        Me.ReportesDeCargosToolStripMenuItem.Size = New System.Drawing.Size(256, 26)
+        Me.ReportesDeCargosToolStripMenuItem.Text = "Reportes de Cargos"
+        '
+        'ReportesDeEmpleadosToolStripMenuItem
+        '
+        Me.ReportesDeEmpleadosToolStripMenuItem.BackColor = System.Drawing.Color.DarkBlue
+        Me.ReportesDeEmpleadosToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ReportesDeEmpleadosToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.ReportesDeEmpleadosToolStripMenuItem.Name = "ReportesDeEmpleadosToolStripMenuItem"
+        Me.ReportesDeEmpleadosToolStripMenuItem.Size = New System.Drawing.Size(256, 26)
+        Me.ReportesDeEmpleadosToolStripMenuItem.Text = "Reportes de Empleados"
+        '
+        'EmpleadosToolStripMenuItem
+        '
+        Me.EmpleadosToolStripMenuItem.BackColor = System.Drawing.Color.DarkBlue
+        Me.EmpleadosToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(256, 26)
+        Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(283, 299)
-        Me.Controls.Add(Me.BtnImprimirCargos)
+        Me.BackColor = System.Drawing.Color.SteelBlue
+        Me.ClientSize = New System.Drawing.Size(712, 368)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
         Me.Text = "Fomulario Principal"
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents BtnImprimirCargos As Button
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents ReportesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReportesDeCargosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReportesDeEmpleadosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EmpleadosToolStripMenuItem As ToolStripMenuItem
 End Class

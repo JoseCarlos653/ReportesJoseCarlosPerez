@@ -96,6 +96,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BdHRDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BdHRDataSet.vb">
+      <DependentUpon>BdHRDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -103,10 +106,22 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="formularios\FrmEmpleado.Designer.vb">
+      <DependentUpon>FrmEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\FrmEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formularios\FrmVistaPrevia.Designer.vb">
       <DependentUpon>FrmVistaPrevia.vb</DependentUpon>
     </Compile>
     <Compile Include="formularios\FrmVistaPrevia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\FrmVistaPreviaEP.Designer.vb">
+      <DependentUpon>FrmVistaPreviaEP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\FrmVistaPreviaEP.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -131,8 +146,14 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formularios\FrmEmpleado.resx">
+      <DependentUpon>FrmEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\FrmVistaPrevia.resx">
       <DependentUpon>FrmVistaPrevia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\FrmVistaPreviaEP.resx">
+      <DependentUpon>FrmVistaPreviaEP.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
