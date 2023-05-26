@@ -12,6 +12,7 @@ Public Class FrmEmpleado
         GroupBox2.Text = "Registros guardados: " & DgvRegistros.RowCount
     End Sub
 
+
     Dim fila As DataRow
     Private Function CrearTabla(query) As DataTable
         Dim tbl As DataTable = New DataTable("tblEmp")
@@ -38,6 +39,7 @@ Public Class FrmEmpleado
         Return tbl
     End Function
 
+
     Private Sub RealizarBusqueda()
         Dim dato As String = TxtDato.Text & ""
 
@@ -47,9 +49,18 @@ Public Class FrmEmpleado
                         emp.hire_date, emp.salary
 
         Select Case CmbCampo.SelectedIndex
-            Case -1 Or 0
-
+            Case -1
                 query = From emp In tblEmp Where emp.job_title Like dato
+                        Select emp.job_title, emp.first_name, emp.last_name, emp.email,
+                            emp.phone_number, emp.hire_date, emp.salary
+
+            Case 0
+                query = From emp In tblEmp Where emp.job_title Like dato
+                        Select emp.job_title, emp.first_name, emp.last_name, emp.email,
+                            emp.phone_number, emp.hire_date, emp.salary
+
+            Case 1
+                query = From emp In tblEmp Where emp.first_name Like dato
                         Select emp.job_title, emp.first_name, emp.last_name, emp.email,
                             emp.phone_number, emp.hire_date, emp.salary
             Case 2
@@ -66,6 +77,7 @@ Public Class FrmEmpleado
         GroupBox2.Text = "Registros guardados" & DgvRegistros.RowCount
     End Sub
 
+
     Sub VerReporte(ByVal t As DataTable, ByVal nombreDs As String, ByVal nombreRpt As String)
         Try
             Dim rpt As New ReportDataSource(nombreDs, t)
@@ -74,18 +86,31 @@ Public Class FrmEmpleado
                 .ReportViewer1.LocalReport.DataSources.Add(rpt)
                 .ReportViewer1.LocalReport.ReportPath = nombreRpt
                 .ReportViewer1.Refresh()
-
+                .Show()
             End With
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al cargar el reporte")
         End Try
     End Sub
 
+
     Private Sub FrmEmpleado_Load(sender As Object, e As EventArgs) Handles Me.Load
         LlenarGrid()
     End Sub
 
+
     Private Sub BtnMostrar_Click(sender As Object, e As EventArgs) Handles BtnMostrar.Click
         RealizarBusqueda()
+    End Sub
+
+
+    Private Sub BtnImprimir_Click(sender As Object, e As EventArgs) Handles BtnImprimir.Click
+        VerReporte(tbl, "DsReportes", "diseñosRpt\RptEmpleadoTrabajo.rdlc")
+    End Sub
+
+    Private Sub TxtDato_TextChanged(sender As Object, e As EventArgs) Handles TxtDato.TextChanged
+        If TxtDato.Text = "" Then
+            LlenarGrid()
+        End If
     End Sub
 End Class

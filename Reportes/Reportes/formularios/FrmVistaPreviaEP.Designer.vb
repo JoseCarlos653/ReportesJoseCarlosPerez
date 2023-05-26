@@ -31,18 +31,18 @@ Partial Class FrmVistaPreviaEP
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(1067, 554)
+        Me.ReportViewer1.Size = New System.Drawing.Size(1442, 723)
         Me.ReportViewer1.TabIndex = 0
         '
         'FrmVistaPreviaEP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1067, 554)
+        Me.ClientSize = New System.Drawing.Size(1442, 723)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "FrmVistaPreviaEP"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmVistaPreviaEP"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
 
     End Sub

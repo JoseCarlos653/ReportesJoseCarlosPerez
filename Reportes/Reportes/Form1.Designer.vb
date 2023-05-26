@@ -26,7 +26,6 @@ Partial Class Form1
         Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportesDeCargosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportesDeEmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -43,7 +42,7 @@ Partial Class Form1
         '
         'ReportesToolStripMenuItem
         '
-        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportesDeCargosToolStripMenuItem, Me.ReportesDeEmpleadosToolStripMenuItem, Me.EmpleadosToolStripMenuItem})
+        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportesDeCargosToolStripMenuItem, Me.ReportesDeEmpleadosToolStripMenuItem})
         Me.ReportesToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ReportesToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
@@ -68,14 +67,6 @@ Partial Class Form1
         Me.ReportesDeEmpleadosToolStripMenuItem.Size = New System.Drawing.Size(256, 26)
         Me.ReportesDeEmpleadosToolStripMenuItem.Text = "Reportes de Empleados"
         '
-        'EmpleadosToolStripMenuItem
-        '
-        Me.EmpleadosToolStripMenuItem.BackColor = System.Drawing.Color.DarkBlue
-        Me.EmpleadosToolStripMenuItem.ForeColor = System.Drawing.Color.White
-        Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(256, 26)
-        Me.EmpleadosToolStripMenuItem.Text = "Empleados"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -97,5 +88,4 @@ Partial Class Form1
     Friend WithEvents ReportesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportesDeCargosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportesDeEmpleadosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EmpleadosToolStripMenuItem As ToolStripMenuItem
 End Class

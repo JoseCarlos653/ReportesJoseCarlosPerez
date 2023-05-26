@@ -22,8 +22,8 @@ Partial Class FrmEmpleado
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.BtnMostrar = New System.Windows.Forms.Button()
         Me.TxtDato = New System.Windows.Forms.TextBox()
@@ -34,6 +34,7 @@ Partial Class FrmEmpleado
         Me.TxtRango1 = New System.Windows.Forms.TextBox()
         Me.DtpFecha2 = New System.Windows.Forms.DateTimePicker()
         Me.DtpFecha1 = New System.Windows.Forms.DateTimePicker()
+        Me.BtnImprimir = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DgvRegistros, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -42,6 +43,7 @@ Partial Class FrmEmpleado
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.DarkBlue
+        Me.GroupBox1.Controls.Add(Me.BtnImprimir)
         Me.GroupBox1.Controls.Add(Me.BtnMostrar)
         Me.GroupBox1.Controls.Add(Me.TxtDato)
         Me.GroupBox1.Controls.Add(Me.CmbCampo)
@@ -49,7 +51,7 @@ Partial Class FrmEmpleado
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1098, 104)
+        Me.GroupBox1.Size = New System.Drawing.Size(1098, 132)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Seleccione por que campo desea buscar"
@@ -58,7 +60,7 @@ Partial Class FrmEmpleado
         '
         Me.BtnMostrar.BackColor = System.Drawing.Color.MidnightBlue
         Me.BtnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnMostrar.Location = New System.Drawing.Point(883, 41)
+        Me.BtnMostrar.Location = New System.Drawing.Point(883, 29)
         Me.BtnMostrar.Name = "BtnMostrar"
         Me.BtnMostrar.Size = New System.Drawing.Size(188, 35)
         Me.BtnMostrar.TabIndex = 2
@@ -68,19 +70,20 @@ Partial Class FrmEmpleado
         'TxtDato
         '
         Me.TxtDato.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtDato.Location = New System.Drawing.Point(307, 45)
+        Me.TxtDato.Location = New System.Drawing.Point(307, 57)
         Me.TxtDato.Name = "TxtDato"
-        Me.TxtDato.Size = New System.Drawing.Size(553, 30)
+        Me.TxtDato.Size = New System.Drawing.Size(549, 30)
         Me.TxtDato.TabIndex = 1
         '
         'CmbCampo
         '
         Me.CmbCampo.FormattingEnabled = True
         Me.CmbCampo.Items.AddRange(New Object() {"Profesión", "Nombres ", "Apellidos"})
-        Me.CmbCampo.Location = New System.Drawing.Point(30, 44)
+        Me.CmbCampo.Location = New System.Drawing.Point(30, 56)
         Me.CmbCampo.Name = "CmbCampo"
         Me.CmbCampo.Size = New System.Drawing.Size(262, 31)
         Me.CmbCampo.TabIndex = 0
+        Me.CmbCampo.Text = "Seleccione el campo..."
         '
         'GroupBox2
         '
@@ -92,9 +95,9 @@ Partial Class FrmEmpleado
         Me.GroupBox2.Controls.Add(Me.DtpFecha1)
         Me.GroupBox2.Font = New System.Drawing.Font("Nirmala UI", 10.2!, System.Drawing.FontStyle.Bold)
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
-        Me.GroupBox2.Location = New System.Drawing.Point(13, 140)
+        Me.GroupBox2.Location = New System.Drawing.Point(13, 172)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(1096, 597)
+        Me.GroupBox2.Size = New System.Drawing.Size(1096, 565)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Registros Encontrados: 0"
@@ -108,14 +111,14 @@ Partial Class FrmEmpleado
         Me.DgvRegistros.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DgvRegistros.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
         Me.DgvRegistros.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Nirmala UI", 10.2!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvRegistros.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Nirmala UI", 10.2!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvRegistros.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DgvRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvRegistros.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DgvRegistros.EnableHeadersVisualStyles = False
@@ -125,15 +128,15 @@ Partial Class FrmEmpleado
         Me.DgvRegistros.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DgvRegistros.RowHeadersVisible = False
         Me.DgvRegistros.RowHeadersWidth = 51
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveCaption
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Nirmala UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
-        Me.DgvRegistros.RowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ActiveCaption
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Nirmala UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White
+        Me.DgvRegistros.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.DgvRegistros.RowTemplate.Height = 24
         Me.DgvRegistros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvRegistros.Size = New System.Drawing.Size(1090, 568)
+        Me.DgvRegistros.Size = New System.Drawing.Size(1090, 536)
         Me.DgvRegistros.TabIndex = 0
         '
         'TxtRango2
@@ -163,6 +166,17 @@ Partial Class FrmEmpleado
         Me.DtpFecha1.Name = "DtpFecha1"
         Me.DtpFecha1.Size = New System.Drawing.Size(200, 30)
         Me.DtpFecha1.TabIndex = 1
+        '
+        'BtnImprimir
+        '
+        Me.BtnImprimir.BackColor = System.Drawing.Color.MidnightBlue
+        Me.BtnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnImprimir.Location = New System.Drawing.Point(883, 79)
+        Me.BtnImprimir.Name = "BtnImprimir"
+        Me.BtnImprimir.Size = New System.Drawing.Size(188, 35)
+        Me.BtnImprimir.TabIndex = 3
+        Me.BtnImprimir.Text = "Imprimir"
+        Me.BtnImprimir.UseVisualStyleBackColor = False
         '
         'FrmEmpleado
         '
@@ -195,4 +209,5 @@ Partial Class FrmEmpleado
     Friend WithEvents TxtRango1 As TextBox
     Friend WithEvents DtpFecha2 As DateTimePicker
     Friend WithEvents DtpFecha1 As DateTimePicker
+    Friend WithEvents BtnImprimir As Button
 End Class
